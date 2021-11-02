@@ -1,18 +1,36 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+<div>
+  <div class="wrapper">
+  <div class="title">
+  <h1>Welcome to Our Q&A page</h1>
   </div>
+    <div class="search">
+      <form class="pure-form">
+        <i class="fas fa-search"></i><input v-model="searchText" />
+      </form>
+    </div>
+  </div>
+  <QuestionsList :questions="questions" />
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import QuestionsList from "@/components/QuestionsList.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    QuestionsList,
   },
+  data() {
+    return {
+      searchText: '',
+    }
+  },
+  computed: {
+  questions() {
+    return this.$root.$data.questions.filter(question => question.query.toLowerCase().search(this.searchText.toLowerCase()) >= 0);
+  }
+  }
 };
 </script>

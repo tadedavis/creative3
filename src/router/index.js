@@ -11,7 +11,13 @@ const routes = [
     component: Home,
   },
   {
-    path: "/about",
+      path: "/answerform/:id",
+      name: "AnswerForm",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "../views/AnswerForm.vue"),
+  },
+  {
+    path: "/about/:id",
     name: "About",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
