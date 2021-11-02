@@ -1,9 +1,16 @@
 <template>
   <div id="app">
+    <div id="wrap">
     <div id="nav">
-      <router-link to="/">Home</router-link>
+    <router-link to="/">
+      <img src="/images/q&a.jpg">
+    </router-link>
     </div>
     <router-view />
+    <footer class='footer'>
+    GitHub Repository: <a href="https://github.com/tadedavis/creative3">linked here/</a>
+    </footer>
+  </div>
   </div>
 </template>
 
@@ -14,6 +21,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  position:relative;
+  min-height: 95vh;
 }
 
 #nav {
@@ -26,6 +35,22 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: blue;
 }
+
+#wrap {
+  padding-bottom: 2.5rem;
+}
+
+.footer {
+    position: absolute;
+    background: #000;
+    width: 100%;
+    bottom: 0;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    text-align: center;
+    color: white;
+}
+
 </style>

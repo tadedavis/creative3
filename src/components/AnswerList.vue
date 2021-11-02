@@ -3,10 +3,11 @@
   <div class="questions">
     <div class="questions" v-for="answer in answers" :key="answer.key">
       <div class="info">
-        <h2>{{answer.string}}</h2>
+        <li><strong>{{answer.string}}</strong> --{{answer.author}}, {{answer.date}}</li>
       </div>
       </div>
   </div>
+  <br>
 </div>
 </template>
 
