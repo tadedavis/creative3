@@ -3,8 +3,9 @@
     <div id="wrap">
     <div id="nav">
     <router-link to="/">
-      <img src="/images/q&a.jpg">
+      <p> Home Page</p>
     </router-link>
+      <h1> General Q&A Page</h1>
     </div>
     <router-view />
     <footer class='footer'>
@@ -23,6 +24,7 @@
   color: #2c3e50;
   position:relative;
   min-height: 95vh;
+  background-image: url("../public/images/background.png");
 }
 
 #nav {
@@ -31,7 +33,7 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #blue;
 }
 
 #nav a.router-link-exact-active {

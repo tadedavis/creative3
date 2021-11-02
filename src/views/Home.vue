@@ -2,11 +2,11 @@
 <div>
   <div class="wrapper">
   <div class="title">
-  <h1>Welcome to Our Q&A page</h1>
   </div>
     <div class="search">
-      <form class="pure-form">
-        <i class="fas fa-search"></i><input v-model="searchText" />
+      <form>
+        <label for="fas">Search Questions</label><br>
+        <i class="fas" fa-search></i><input v-model="searchText" />
       </form>
     </div>
   </div>

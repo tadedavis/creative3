@@ -1,15 +1,19 @@
 <template>
 <div>
   <h1> {{question.query}}?</h1>
+  <div class="form-wrapper">
+  <div class="form-container">
   <form>
     <label for="name">Name: </label><br>
     <input type="text" v-model="a"><br>
     <label for="date">Date:</label><br>
     <input type="text" v-model="b"><br>
     <label for="message">Your Answer:</label><br>
-    <input type="text" v-model="c"><br>
+    <input class="submissionfield" type="message" v-model="c"><br><br>
     <button  v-on:click="addAnswer()">submit</button>
   </form>
+  </div>
+  </div>
   </div>
 </template>
 
@@ -47,3 +51,20 @@ export default {
 }
 
 </script>
+
+<style>
+.form-wrapper {
+display: flex;
+justify-content: center;
+}
+
+.form-container {
+  padding: 1em;
+  width: 20em;
+  background-color: #fff;
+  }
+  .submissionfield {
+   height: 3em;
+   }
+
+</style>

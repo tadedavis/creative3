@@ -3,6 +3,7 @@
   <div class="wrapper">
     <div class="search">
       <form class="pure-form">
+      <label for="fas">Search Answers</label><br>
         <i class="fas fa-search"></i><input v-model="searchText" />
       </form>
     </div>

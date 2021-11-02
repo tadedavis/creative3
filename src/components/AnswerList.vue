@@ -1,9 +1,13 @@
 <template>
 <div class="wrapper">
-  <div class="questions">
+  <div class="question">
+  <div v-if="answers.length === 0">
+    <h3> No one has answered this question yet! </h3>
+    </div>
     <div class="questions" v-for="answer in answers" :key="answer.key">
       <div class="info">
-        <li><strong>{{answer.string}}</strong> --{{answer.author}}, {{answer.date}}</li>
+        <h2>{{answer.string}}</h2>
+        <p>--{{answer.author}}, {{answer.date}}</p>
       </div>
       </div>
   </div>
@@ -23,3 +27,7 @@ export default {
 }
 
 </script>
+
+<style>
+
+</style>

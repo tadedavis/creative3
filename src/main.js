@@ -20,7 +20,7 @@ let data = {
   key: 2,
   string: "Paris",
   author: "Tade Davis",
-  date: 11/1/2021
+  date: "11/1/2021"
 },
 ]
 }
